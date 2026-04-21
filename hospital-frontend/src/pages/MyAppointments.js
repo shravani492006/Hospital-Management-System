@@ -8,7 +8,9 @@ function MyAppointments() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/appointments", {
+    if (!token) return;
+
+    fetch("https://hospital-management-system-1-jrj5.onrender.com/api/appointments", {
       headers: {
         Authorization: "Bearer " + token
       }
@@ -16,20 +18,26 @@ function MyAppointments() {
       .then(res => res.json())
       .then(data => setAppointments(data))
       .catch(err => console.log(err));
-  }, []);
+
+  }, [token]);
 
   const handleCancel = async (id) => {
-    const res = await fetch(`http://localhost:5000/api/appointments/${id}`, {
-      method: "DELETE",
-      headers: {
-        Authorization: "Bearer " + token
+    const res = await fetch(
+      `https://hospital-management-system-1-jrj5.onrender.com/api/appointments/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: "Bearer " + token
+        }
       }
-    });
+    );
 
     const data = await res.json();
     alert(data.message);
 
-    setAppointments(prev => prev.filter(app => app.appointment_id !== id));
+    setAppointments(prev =>
+      prev.filter(app => app.appointment_id !== id)
+    );
   };
 
   // FILTER LOGIC
