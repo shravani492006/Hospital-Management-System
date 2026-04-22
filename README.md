@@ -13,6 +13,32 @@ https://hospitalmanagementshravani.netlify.app/
 🔗 Backend API:  
 https://hospital-management-system-1-jrj5.onrender.com
 
+
+## 📸 Screenshots
+
+Login Page 
+
+<img width="1557" height="784" alt="image" src="https://github.com/user-attachments/assets/8fbe6e49-b7a1-44ea-bdeb-7dc586e8f083" />
+
+Dashboard 
+
+<img width="1916" height="749" alt="image" src="https://github.com/user-attachments/assets/446e0434-8ff5-4c00-ba35-ee3026bcd4b4" />
+
+Book Appointment 
+<img width="1647" height="802" alt="image" src="https://github.com/user-attachments/assets/cfaf6019-b846-41f5-bfef-85aff7fe6f41" />
+
+Doctors
+<img width="1919" height="952" alt="image" src="https://github.com/user-attachments/assets/fdc7e05d-78bd-4ef8-82ef-5c8ff5236838" />
+
+Booked Appointments
+
+<img width="1919" height="685" alt="image" src="https://github.com/user-attachments/assets/49674a8e-a782-4239-b9b9-54dc8b728722" />
+
+Billing 
+<img width="1919" height="520" alt="image" src="https://github.com/user-attachments/assets/30e6060b-5874-4118-bd88-ec7d3fcc734b" />
+
+---
+
 ---
 
 ## 🚀 Features
@@ -45,30 +71,6 @@ https://hospital-management-system-1-jrj5.onrender.com
 
 ---
 
-## 📸 Screenshots
-
-Login Page 
-
-<img width="1557" height="784" alt="image" src="https://github.com/user-attachments/assets/8fbe6e49-b7a1-44ea-bdeb-7dc586e8f083" />
-
-Dashboard 
-
-<img width="1916" height="749" alt="image" src="https://github.com/user-attachments/assets/446e0434-8ff5-4c00-ba35-ee3026bcd4b4" />
-
-Book Appointment 
-<img width="1647" height="802" alt="image" src="https://github.com/user-attachments/assets/cfaf6019-b846-41f5-bfef-85aff7fe6f41" />
-
-Doctors
-<img width="1919" height="952" alt="image" src="https://github.com/user-attachments/assets/fdc7e05d-78bd-4ef8-82ef-5c8ff5236838" />
-
-Booked Appointments
-
-<img width="1919" height="685" alt="image" src="https://github.com/user-attachments/assets/49674a8e-a782-4239-b9b9-54dc8b728722" />
-
-Billing 
-<img width="1919" height="520" alt="image" src="https://github.com/user-attachments/assets/30e6060b-5874-4118-bd88-ec7d3fcc734b" />
-
----
 
 ## 🔐 Demo Credentials
 
