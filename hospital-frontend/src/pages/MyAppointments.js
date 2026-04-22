@@ -10,19 +10,21 @@ function MyAppointments() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/appointments", {
+    fetch(`${API}/api/appointments`, {
       headers: {
         Authorization: "Bearer " + token
       }
     })
       .then(res => res.json())
-      .then(data => setAppointments(data))
+      .then(data => {
+        console.log("Appointments:", data); // 🔥 debug
+        setAppointments(data);
+      })
       .catch(err => console.log(err));
-
   }, [token]);
 
   const handleCancel = async (id) => {
-    const res = await fetch(`http://localhost:5000/api/appointments/${id}`, {
+    const res = await fetch(`${API}/api/appointments/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: "Bearer " + token
