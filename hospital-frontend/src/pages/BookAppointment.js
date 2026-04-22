@@ -15,7 +15,7 @@ function BookAppointment() {
 
   // Fetch doctors
   useEffect(() => {
-    fetch("http://localhost:5000/api/doctors")
+    fetch("https://hospital-management-system-1-jrj5.onrender.com/api/doctors")
       .then(res => res.json())
       .then(data => setDoctors(data));
   }, []);
@@ -23,7 +23,7 @@ function BookAppointment() {
   const handleBook = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:5000/api/appointments", {
+    const res = await fetch("https://hospital-management-system-1-jrj5.onrender.com/api/appointments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

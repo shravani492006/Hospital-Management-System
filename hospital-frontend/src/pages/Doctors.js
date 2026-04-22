@@ -6,7 +6,7 @@ function Doctors() {
 
   // Fetch doctors
   useEffect(() => {
-    fetch("http://localhost:5000/api/doctors")
+    fetch("https://hospital-management-system-1-jrj5.onrender.com/api/doctors")
       .then(res => res.json())
       .then(data => setDoctors(data))
       .catch(err => console.log(err));

@@ -27,7 +27,7 @@ const roomRoutes = require("./routes/roomRoutes");
 app.use("/api/rooms", roomRoutes);
 
 const dashboardRoutes = require("./routes/dashboardRoutes");
-app.use("/api", dashboardRoutes);
+app.use("/api/dashboard", dashboardRoutes);
 
 // Test route
 app.get("/", (req, res) => {

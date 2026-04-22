@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+const API = "https://hospital-management-system-1-jrj5.onrender.com";
+
 function MyAppointments() {
   const [appointments, setAppointments] = useState([]);
   const [filterDate, setFilterDate] = useState("");
@@ -8,9 +10,7 @@ function MyAppointments() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    if (!token) return;
-
-    fetch("https://hospital-management-system-1-jrj5.onrender.com/api/appointments", {
+    fetch("http://localhost:5000/api/appointments", {
       headers: {
         Authorization: "Bearer " + token
       }
@@ -22,15 +22,12 @@ function MyAppointments() {
   }, [token]);
 
   const handleCancel = async (id) => {
-    const res = await fetch(
-      `https://hospital-management-system-1-jrj5.onrender.com/api/appointments/${id}`,
-      {
-        method: "DELETE",
-        headers: {
-          Authorization: "Bearer " + token
-        }
+    const res = await fetch(`http://localhost:5000/api/appointments/${id}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: "Bearer " + token
       }
-    );
+    });
 
     const data = await res.json();
     alert(data.message);
@@ -40,7 +37,6 @@ function MyAppointments() {
     );
   };
 
-  // FILTER LOGIC
   const today = new Date();
 
   const filteredAppointments = appointments.filter(app => {
@@ -58,7 +54,6 @@ function MyAppointments() {
     <div className="p-6">
       <h2 className="text-2xl font-bold mb-4 text-center">My Appointments</h2>
 
-      {/* FILTER UI */}
       <div className="flex justify-center gap-4 mb-4">
         <input
           type="date"

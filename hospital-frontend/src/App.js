@@ -15,7 +15,9 @@ function Dashboard() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/stats")
+    const API = "https://hospital-management-system-1-jrj5.onrender.com";
+
+       fetch(`${API}/api/stats`)
       .then(res => res.json())
       .then(data => setStats(data))
       .catch(err => console.log(err));

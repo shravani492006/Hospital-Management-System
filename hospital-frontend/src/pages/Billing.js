@@ -4,14 +4,14 @@ function Billing() {
   const [bills, setBills] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/billing")
+    fetch("https://hospital-management-system-1-jrj5.onrender.com/api/billing")
       .then(res => res.json())
       .then(data => setBills(data))
       .catch(err => console.log(err));
   }, []);
 
   const handlePay = async (id) => {
-    const res = await fetch(`http://localhost:5000/api/billing/pay/${id}`, {
+    const res = await fetch(`https://hospital-management-system-1-jrj5.onrender.com/api/billing/pay/${id}`, {
       method: "PUT"
     });
 
